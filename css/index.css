@@ -21,6 +21,8 @@ body {
 }
 
 
+/* 下のメニューバー・ホームボタン */
+/* 
 .footer-menu {
     position: fixed;
     bottom: 0;
@@ -40,23 +42,39 @@ body {
     >span {
         height: 37px;
     }
-}
+} */
 
 .question {
     display: block;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 
     >img {
         margin-top: 50px;
     }
 
-    .question_line {
+
+    /* 下の悩みのボーダー線 */
+    /* .question_line {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-bottom: 400px;
         margin-top: 30px;
-        margin-left: 56px;
         width: 290px;
         height: 2px;
         background-color: #000;
+    } */
+
+
+    .question_text {
+        margin-top: 30px;
+        margin-bottom: 250px;
+        font-size: 14px;
+        font-weight: bold;
     }
 
     .arrow_box {
@@ -107,4 +125,38 @@ body {
         align-items: center;
 
     }
+
+}
+
+.arrow_box {
+    overflow: hidden;
+}
+
+/* 文字を動かすのは h2 ではなく span */
+.arrow_box h2 {
+    margin: 0;
+    line-height: 1;
+}
+
+.arrow_box h2 .bubble-text {
+    display: inline-block;
+    white-space: nowrap;
+
+    /* 初期状態：右外 */
+    transform: translateX(120%);
+    opacity: 0;
+
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* 中央に入る */
+.arrow_box h2 .bubble-text.is-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* 左へ抜ける */
+.arrow_box h2 .bubble-text.is-out {
+    transform: translateX(-120%);
+    opacity: 0;
 }
