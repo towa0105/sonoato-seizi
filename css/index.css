@@ -160,3 +160,166 @@ body {
     transform: translateX(-120%);
     opacity: 0;
 }
+
+.giji {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 投票と次の要素の隙間のマージン */
+    margin-bottom: 70px;
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+
+    .article_giji {
+        /* 青いボックス */
+        width: 250px;
+        height: 125px;
+        background-color: #68C5F3;
+        border-radius: 10px;
+        margin-bottom: 25px;
+        color: #FFF;
+
+
+        .giji_box {
+            /* 青い箱の中の要素 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 3px;
+
+
+        }
+    }
+
+    /* 全部のh2に適応されてます */
+    h2 {
+        margin-top: 10px;
+        font-size: 24px;
+        font-weight: inherit;
+    }
+
+    /* 全部のpに適応されてます */
+
+    p {
+        font-size: 14px;
+    }
+}
+
+
+
+.hikaku {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: flex-start; */
+    max-width: 100%;
+    overflow: auto;
+
+    h1 {
+        margin: 0;
+    }
+
+    .hikaku_tittle {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .hikaku_flex {
+        display: flex;
+        gap: 25px;
+        /* justify-content: center; */
+        padding-left: 40px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    .article_hikaku {
+        width: 220px;
+        height: 260px;
+        background-color: #68C5F3;
+        border-radius: 10px;
+        color: #FFF;
+
+
+        img {
+            /* display: inline-block; */
+            width: 147px;
+            height: 133px;
+            /* ＝＝↓無理やり真ん中にアイコンを置いています＝＝ */
+            margin-top: 52px;
+            margin-left: 49px;
+            /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+        }
+    }
+
+    .hikaku_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            margin-top: 22px;
+        }
+    }
+}
+
+.re_giji {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin-top: 70px;
+        margin-bottom: 80px;
+    }
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.candidate {
+    width: 320px;
+    height: 150px;
+    background-color: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0 8px gray;
+    margin-bottom: 30px;
+    display: flex;
+
+    rt {
+        color: #999;
+        font-size: 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+        width: 97px;
+        margin-left: 12px;
+        margin-top: 11px;
+    }
+
+    .person_img {
+        img {
+            width: 104px;
+            height: 150px;
+            border-radius: 10px;
+        }
+    }
+
+    .role {}
+}
