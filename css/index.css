@@ -4,6 +4,8 @@ html {
 
 body {
     background-color: #F3FAFF;
+    font-family: 'A P-OTF A1Gothic Std', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .main_vs {
@@ -212,6 +214,7 @@ body {
 
     p {
         font-size: 14px;
+        line-height: 1;
     }
 }
 
@@ -408,8 +411,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: flex-start; */
-    max-width: 100%;
     overflow: auto;
 
     h1 {
@@ -428,8 +429,6 @@ body {
     .hikaku_flex {
         display: flex;
         gap: 25px;
-        /* justify-content: center; */
-        padding-left: 40px;
         overflow-x: auto;
         overflow-y: hidden;
     }
@@ -440,6 +439,11 @@ body {
         background-color: #68C5F3;
         border-radius: 10px;
         color: #FFF;
+        /* margin-left: 80px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
 
 
         img {
@@ -447,8 +451,6 @@ body {
             width: 147px;
             height: 133px;
             /* ＝＝↓無理やり真ん中にアイコンを置いています＝＝ */
-            margin-top: 52px;
-            margin-left: 49px;
             /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
         }
     }
@@ -483,6 +485,10 @@ body {
     align-items: center;
 }
 
+.person_text {
+    display: flex;
+}
+
 .candidate {
     width: 320px;
     height: 150px;
@@ -498,7 +504,8 @@ body {
     }
 
     h2 {
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 500;
         width: 97px;
         margin-left: 12px;
         margin-top: 11px;
@@ -513,7 +520,11 @@ body {
     }
 
     .role {
-        font-size: 12px;
+
+        /* font-size: 12px; */
+        day {
+            font-size: 8px;
+        }
     }
 }
 
