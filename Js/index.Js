@@ -55,4 +55,65 @@ document.addEventListener("DOMContentLoaded", () => {
     }, stayMs + moveMs);
 });
 
+// ===============================
+// giji アコーディオン（記事直下から展開）
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+    const topics = document.querySelectorAll(".article_giji.js-topic");
+
+    function closeAll() {
+        document.querySelectorAll(".topic-detail").forEach(d => {
+            d.classList.remove("is-open");
+            d.setAttribute("aria-hidden", "true");
+        });
+        topics.forEach(t => t.setAttribute("aria-expanded", "false"));
+    }
+
+    topics.forEach(topic => {
+        topic.addEventListener("click", () => {
+            const detail = topic.nextElementSibling; // 直後の .topic-detail
+            if (!detail || !detail.classList.contains("topic-detail")) return;
+
+            const isOpen = detail.classList.contains("is-open");
+
+            if (isOpen) {
+                detail.classList.remove("is-open");
+                detail.setAttribute("aria-hidden", "true");
+                topic.setAttribute("aria-expanded", "false");
+                return;
+            }
+
+            closeAll();
+
+            detail.classList.add("is-open");
+            detail.setAttribute("aria-hidden", "false");
+            topic.setAttribute("aria-expanded", "true");
+
+            // 開いた場所へ寄せる（演出）
+            const y = topic.getBoundingClientRect().top + window.scrollY - 12;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        });
+    });
+
+    // 詳細内「閉じる」でも閉じる
+    document.addEventListener("click", (e) => {
+        const closeBtn = e.target.closest(".detailClose");
+        if (!closeBtn) return;
+
+        const detail = closeBtn.closest(".topic-detail");
+        if (!detail) return;
+
+        const topic = detail.previousElementSibling;
+        detail.classList.remove("is-open");
+        detail.setAttribute("aria-hidden", "true");
+
+        if (topic && topic.classList.contains("article_giji")) {
+            topic.setAttribute("aria-expanded", "false");
+            const y = topic.getBoundingClientRect().top + window.scrollY - 12;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        }
+    });
+});
+
+
 

@@ -16,13 +16,17 @@ body {
     }
 }
 
+.first_logo {
+    height: 141px;
+}
+
 .font_color {
     color: #AE0000;
 }
 
 
 /* 下のメニューバー・ホームボタン */
-/* 
+
 .footer-menu {
     position: fixed;
     bottom: 0;
@@ -42,7 +46,7 @@ body {
     >span {
         height: 37px;
     }
-} */
+}
 
 .question {
     display: block;
@@ -167,7 +171,7 @@ body {
     justify-content: center;
     align-items: center;
     /* 投票と次の要素の隙間のマージン */
-    margin-bottom: 70px;
+    /* margin-bottom: 70px; */
 
     h1 {
         margin-bottom: 20px;
@@ -180,7 +184,7 @@ body {
         height: 125px;
         background-color: #68C5F3;
         border-radius: 10px;
-        margin-bottom: 25px;
+        /* margin-bottom: 25px; */
         color: #FFF;
 
 
@@ -209,6 +213,193 @@ body {
     p {
         font-size: 14px;
     }
+}
+
+/* ========== giji accordion 追加 ========== */
+
+/* article をボタンとして扱えるように */
+.article_giji.js-topic {
+    cursor: pointer;
+    user-select: none;
+    transition: transform .12s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.article_giji.js-topic:active {
+    transform: scale(0.99);
+}
+
+.article_giji.js-topic[aria-expanded="true"] {
+    filter: saturate(1.05);
+}
+
+/* ︿ の回転 */
+.giji_chev {
+    font-weight: 900;
+    font-size: 16px;
+    opacity: .9;
+    transition: transform .22s ease;
+}
+
+.article_giji.js-topic[aria-expanded="true"] .giji_chev {
+    transform: rotate(180deg) translateY(1px);
+}
+
+/* -------- アコーディオン本体（滑らか演出） -------- */
+
+/* 青いテーマカード同士の間隔 */
+.giji .article_giji {
+    margin-bottom: 12px;
+}
+
+/* 閉じている詳細は完全に消す */
+.topic-detail {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 開いた時だけ余白を足す */
+.topic-detail.is-open {
+    height: auto;
+    margin-top: 10px;
+}
+
+.topic-detail {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    margin: 0;
+    transform: none;
+    transition:
+        grid-template-rows .38s cubic-bezier(.2, .9, .2, 1),
+        opacity .22s ease;
+}
+
+.topic-detail>* {
+    overflow: hidden;
+}
+
+.topic-detail.is-open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.topic-detail.is-open .profile,
+.topic-detail.is-open .detailTop {
+    animation: pop .38s cubic-bezier(.2, .9, .2, 1) both;
+}
+
+@keyframes pop {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* -------- 候補者カード -------- */
+.profile {
+    margin-top: 14px;
+    background: #fff;
+    border: 2px dashed #c9c9c9;
+    border-radius: 12px;
+    padding: 18px 14px 16px;
+}
+
+.profile_name {
+    text-align: center;
+}
+
+.profile__imgWrap {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0 14px;
+}
+
+.profile__img {
+    width: 170px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f2f2f2;
+}
+
+.profile__table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.profile__table th,
+.profile__table td {
+    padding: 10px 6px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.profile__table th {
+    width: 72px;
+    color: #888;
+    font-weight: 900;
+}
+
+.voteBtn {
+    margin: 18px auto 8px;
+    display: block;
+    width: min(260px, 92%);
+    border: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 18px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 16px 22px rgba(0, 0, 0, .2);
+    background: linear-gradient(211deg, #68C5F3 -22.18%, #53B9EB 46.51%, #030350 219.99%);
+    transition: transform .12s ease, filter .2s ease;
+}
+
+.voteBtn_object {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    opacity: 0.3;
+    background-color: #FFF;
+    clip-path: polygon(2% 50%, 19% 98%, 41% 99%, 32% 51%, 40% 0%, 16% 0%, 9% 26%, 5% 38%, 6% 63%, 11% 76%, 15% 86%, 25% 100%, 40% 99%);
+}
+
+.voteBtn:active {
+    transform: scale(0.99);
+}
+
+.voteBtn:hover {
+    filter: brightness(1.03);
+}
+
+.detailClose {
+    margin: 10px auto 0;
+    display: block;
+    border: 0;
+    background: transparent;
+    color: #2b6d86;
+    font-weight: 900;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 10px 8px;
+}
+
+.detailStub {
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, .18);
 }
 
 
@@ -307,7 +498,7 @@ body {
     }
 
     h2 {
-        font-size: 20px;
+        font-size: 16px;
         width: 97px;
         margin-left: 12px;
         margin-top: 11px;
@@ -321,5 +512,135 @@ body {
         }
     }
 
-    .role {}
+    .role {
+        font-size: 12px;
+    }
+}
+
+.news {
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+.news_flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+
+    .news_box {
+        width: 163px;
+        height: 163px;
+        /* border: #999 3px solid; */
+        box-shadow: 0 0 4px gray;
+        background-color: #FFF;
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+    }
+}
+
+.nwes_img {}
+
+.new_tag {
+    position: absolute;
+    top: -33px;
+    left: -33px;
+}
+
+.study {
+    h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 135px;
+        margin-bottom: 30px;
+    }
+}
+
+.study_contet {
+    background-image: url(../images/study.png);
+    width: 163px;
+    height: 163px;
+    border: #000 3px solid;
+    box-shadow: 0 0 4px gray;
+
+    h3 {
+        font-size: 50px;
+        margin-left: 7px;
+        color: #FFF;
+
+    }
+
+    P {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        color: #ffffff;
+
+    }
+}
+
+.study_flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+main {
+    margin-bottom: 213px;
+}
+
+/* footer {
+    background-color: #5B5B5B;
+    width: 402px;
+    height: 351px;
+
+    .footer_logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 197px;
+        height: 100px;
+    }
+} */
+
+.footer-2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px 10px 10px;
+    background-color: #52b9eb;
+}
+
+.footer-2__logo {
+    width: 130px;
+    height: 30px;
+}
+
+.footer-2__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1.5em;
+    list-style-type: none;
+    margin: 0 0 .5em;
+    padding: .5em;
+}
+
+.footer-2__sns-icon {
+    width: 21px;
+    height: 21px;
+}
+
+.footer-2__copyright {
+    margin: 0;
+    color: #ffffffb3;
+    font-weight: 200;
+    font-size: .8em;
 }

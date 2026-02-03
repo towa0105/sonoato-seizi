@@ -14,12 +14,12 @@
     <main>
         <div class="main_vs">
             <img class="first_view" src="images/first_view.png" alt="">
-            <img src="images/ロゴ.png" alt="">
+            <img class="first_logo" src="images/ロゴ透過バージョン縮小.png" alt="">
             <h1>あなたの選択で、<span class="font_color">日本</span>が変わる</h1>
         </div>
 
         <div class="footer-menu">
-            <a href="#" class="fas fa-home">
+            <a href="search.html" class="fas fa-home">
                 <span><img src="images/search_button.png" alt=""></span>
             </a>
             <a href="#" class="fas fa-search">
@@ -39,36 +39,144 @@
         </div>
         <div class="giji">
             <h1>まずは直感で選んでみよう</h1>
-            <article class="article_giji">
+
+            <!-- 教育・格差 -->
+            <article class="article_giji js-topic" data-topic="education" aria-expanded="false">
                 <div class="giji_box">
                     <h2>教育・格差</h2>
-                    <p>すべての若者に平等な<br>
-                        スタートラインを</p>
+                    <p>すべての若者に平等な<br>スタートラインを</p>
+                    <div class="giji_chev" aria-hidden="true">︿</div>
                 </div>
             </article>
-            <article class="article_giji">
+
+            <div class="topic-detail" aria-hidden="true">
+                <!-- ==============コピー================ -->
+                <!-- 1枚目の候補者カード -->
+                <article class="profile" aria-label="候補者カード">
+
+                    <div class="profile_name">
+                        <h2><ruby>林<rt>はやし</rt>原<rt>ばら</rt>大<rt>だい</rt>喜<rt>き</rt></ruby></h2>
+                    </div>
+                    <div class="profile__imgWrap">
+                        <img class="profile__img" src="images/AdobeStock_602821515.jpeg" alt="候補者の写真">
+                    </div>
+
+                    <table class="profile__table" aria-label="候補者情報">
+                        <tr>
+                            <th>性別</th>
+                            <td>男性</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>３５歳</td>
+                        </tr>
+                        <tr>
+                            <th>選挙区</th>
+                            <td>大阪８区（豊中市）</td>
+                        </tr>
+                        <tr>
+                            <th>選挙</th>
+                            <td>第51回衆議院議員選挙</td>
+                        </tr>
+                        <tr>
+                            <th>党派</th>
+                            <td>未来自由党</td>
+                        </tr>
+                    </table>
+
+                    <button class="voteBtn" type="button">
+                        <div class="voteBtn_object"></div>投票する
+                    </button>
+                </article>
+
+                <button class="detailClose" type="button">閉じる</button>
+            </div>
+            <!-- ==============コピー================ -->
+
+            <!-- 経済・働き方 -->
+            <article class="article_giji js-topic" data-topic="economy" aria-expanded="false">
                 <div class="giji_box">
                     <h2>経済・働き方</h2>
-                    <p>努力がきちんと<br>
-                        報われる社会を</p>
+                    <p>努力がきちんと<br>報われる社会を</p>
+                    <div class="giji_chev" aria-hidden="true">︿</div>
                 </div>
             </article>
-            <article class="article_giji">
+
+            <div class="topic-detail" aria-hidden="true">
+                <article class="profile" aria-label="候補者カード">
+
+                    <div class="profile_name">
+                        <h2><ruby>林<rt>はやし</rt>原<rt>ばら</rt>大<rt>だい</rt>喜<rt>き</rt></ruby></h2>
+                    </div>
+                    <div class="profile__imgWrap">
+                        <img class="profile__img" src="images/AdobeStock_1056620685.jpeg" alt="候補者の写真">
+                    </div>
+
+                    <table class="profile__table" aria-label="候補者情報">
+                        <tr>
+                            <th>性別</th>
+                            <td>男性</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>３５歳</td>
+                        </tr>
+                        <tr>
+                            <th>選挙区</th>
+                            <td>大阪８区（豊中市）</td>
+                        </tr>
+                        <tr>
+                            <th>選挙</th>
+                            <td>第51回衆議院議員選挙</td>
+                        </tr>
+                        <tr>
+                            <th>党派</th>
+                            <td>未来自由党</td>
+                        </tr>
+                    </table>
+
+                    <button class="voteBtn" type="button">
+                        <div class="voteBtn_object"></div>投票する
+                    </button>
+                </article>
+
+                <button class="detailClose" type="button">閉じる</button>
+            </div>
+
+
+            <!-- 環境・地球 -->
+            <article class="article_giji js-topic" data-topic="environment" aria-expanded="false">
                 <div class="giji_box">
                     <h2>環境・地球</h2>
-                    <p>地球にやさしく、<br>
-                        人にもやさしく</p>
+                    <p>地球にやさしく、<br>人にもやさしく</p>
+                    <div class="giji_chev" aria-hidden="true">︿</div>
                 </div>
             </article>
-            <article class="article_giji">
+
+            <div class="topic-detail" aria-hidden="true">
+                <div class="detailStub">
+                    <p>ここに「環境・地球」の候補者カードを入れられます。</p>
+                </div>
+                <button class="detailClose" type="button">閉じる</button>
+            </div>
+
+            <!-- 自由・挑戦 -->
+            <article class="article_giji js-topic" data-topic="freedom" aria-expanded="false">
                 <div class="giji_box">
                     <h2>自由・挑戦</h2>
-                    <p>もっと自由に、<br>
-                        もっと挑戦できる未来へ</p>
+                    <p>もっと自由に、<br>もっと挑戦できる未来へ</p>
+                    <div class="giji_chev" aria-hidden="true">︿</div>
                 </div>
             </article>
-        </div>
 
+            <div class="topic-detail" aria-hidden="true">
+                <div class="detailStub">
+                    <p>ここに「自由・挑戦」の候補者カードを入れられます。</p>
+                </div>
+                <button class="detailClose" type="button">閉じる</button>
+            </div>
+        </div>
+        s
         <div class="hikaku">
             <div class="hikaku_tittle">
                 <h1>政策や実績を比較して見てみよう</h1>
@@ -115,7 +223,7 @@
                     <h2><ruby>渡<rt>わた</rt>辺<rt>なべ</rt>荘<rt>そう</rt>一<rt>いち</rt></ruby></h2>
                     <div class="role">
                         <p>生年月日　1990年 5月6日</p>
-                        <p>前職　</p>
+                        <p>前職　会社員</p>
                     </div>
                     <p>公約</p>
                 </div>
@@ -138,7 +246,7 @@
                     <img src="images/AdobeStock_602821515.jpeg" alt="">
                 </div>
                 <div class="person_text">
-                    <h2><ruby>渡<rt>わた</rt>辺<rt>なべ</rt>荘<rt>そう</rt>一<rt>いち</rt></ruby></h2>
+                    <h2><ruby>林<rt>はやし</rt>原<rt>ばら</rt>大<rt>だい</rt>喜<rt>き</rt></ruby></h2>
                     <div class="role">
                         <p>生年月日　1990年 5月6日</p>
                         <p>前職　</p>
@@ -146,10 +254,96 @@
                     <p>公約</p>
                 </div>
             </div>
+        </div>
+        <div class="news">
+            <h2>最近のニュースを見て<br>
+                政治を知ろう</h2>
+            <div class="news_flex">
+                <div class="news_box">
+                    <img src="images/news_img.png" alt="">
+                    <div class="news_text">
+                        <p><time datetime="2025-07-20">2024 7/20</time></p>
+                        <h3>教育費負担軽減をめぐり意見分かれる</h3>
+                    </div>
+                </div>
+                <div class="news_box">
+                    <img src="images/new_tag.png" alt="" class="new_tag">
+                    <img src="images/news_img.png" alt="">
+                    <div class="news_text">
+                        <p><time datetime="2025-07-20">2024 7/20</time></p>
+                        <h3>若者向け家賃支援制度を試験導入へ</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="study">
+            <h2>コラムを見て政治を知ろう</h2>
 
+            <div class="study_flex">
+                <div class="study_contet">
+                    <h3>01</h3>
+                    <p>与党と野党って何？</p>
+                </div>
+                <div class="study_contet">
+                    <h3>02</h3>
+                    <p>衆議院と参議院<br>
+                        って何？</p>
+                </div>
+                <div class="study_contet">
+                    <h3>03</h3>
+                    <p>政治家って普段<br>
+                        何してるの？</p>
+                </div>
+                <div class="study_contet">
+                    <h3>04</h3>
+                    <p>比例代表制って何？</p>
+                </div>
+            </div>
         </div>
     </main>
-
+    <footer class="footer-2">
+        <a href="#">
+            <!--お好きな画像を指定してください-->
+            <img src="images/ロゴ透過バージョン縮小.png" alt="">
+        </a>
+        <nav>
+            <ul class="footer-2__list">
+                <li>
+                    <a href="#">
+                        <svg class="footer-2__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="footer-2__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#ffffff"
+                                d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="footer-2__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M18.663 10.84a.526.526 0 0 1-.526.525h-1.462v.938h1.462a.525.525 0 1 1 0 1.049H16.15a.526.526 0 0 1-.522-.524V8.852c0-.287.235-.525.525-.525h1.988a.525.525 0 0 1-.003 1.05h-1.462v.938h1.462c.291 0 .526.237.526.525zm-4.098 2.485a.538.538 0 0 1-.166.025.515.515 0 0 1-.425-.208l-2.036-2.764v2.45a.525.525 0 0 1-1.047 0V8.852a.522.522 0 0 1 .52-.523c.162 0 .312.086.412.211l2.052 2.775V8.852c0-.287.235-.525.525-.525.287 0 .525.238.525.525v3.976a.524.524 0 0 1-.36.497zm-4.95.027a.526.526 0 0 1-.523-.524V8.852c0-.287.236-.525.525-.525.289 0 .524.238.524.525v3.976a.527.527 0 0 1-.526.524zm-1.53 0H6.098a.528.528 0 0 1-.525-.524V8.852a.527.527 0 0 1 1.05 0v3.45h1.464a.525.525 0 0 1 0 1.05zM12 2.572c-5.513 0-10 3.643-10 8.118 0 4.01 3.558 7.369 8.363 8.007.325.068.769.215.881.492.1.25.066.638.032.9l-.137.85c-.037.25-.2.988.874.537 1.076-.449 5.764-3.398 7.864-5.812C21.313 14.089 22 12.477 22 10.69c0-4.475-4.488-8.118-10-8.118z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="footer-2__sns-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#fff"
+                                d="M21.543 6.498C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5l6-3.5-6-3.5v7z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="footer-2__copyright">@ 2023 CSS Stock All rights reserved.</p>
+    </footer>
 
 
 </body>
