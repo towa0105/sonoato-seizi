@@ -28,7 +28,7 @@ body {
 
 
 /* 下のメニューバー・ホームボタン */
-
+/* 
 .footer-menu {
     position: fixed;
     bottom: 0;
@@ -48,7 +48,7 @@ body {
     >span {
         height: 37px;
     }
-}
+} */
 
 .question {
     display: block;
@@ -481,51 +481,134 @@ body {
 
 .person {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
 .person_text {
-    display: flex;
+    height: 40px;
 }
 
 .candidate {
-    width: 320px;
-    height: 150px;
+    width: 340px;
+    height: 240px;
     background-color: #FFF;
     border-radius: 10px;
-    box-shadow: 0 0 8px gray;
+    box-shadow: 0 0 8px #ccc;
     margin-bottom: 30px;
     display: flex;
 
+    /* ふりがな */
     rt {
         color: #999;
         font-size: 8px;
     }
 
+    /* 名前 */
     h2 {
         font-size: 20px;
         font-weight: 500;
-        width: 97px;
         margin-left: 12px;
-        margin-top: 11px;
+        margin-top: 16px;
     }
 
     .person_img {
         img {
-            width: 104px;
-            height: 150px;
+            width: 145px;
+            height: 240px;
             border-radius: 10px;
         }
     }
 
-    .role {
+    .person_name {
+        display: flex;
+        gap: 10px;
 
-        /* font-size: 12px; */
-        day {
+        a {
+            width: 56px;
+            height: 24px;
+            border: #000 1px solid;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #000;
             font-size: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 24px;
         }
     }
+
+    .birthday {
+        display: flex;
+        padding-left: 12px;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .role {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        font-size: 14px;
+        gap: 40px;
+        font-size: 14px;
+    }
+
+    .Oneword {
+        display: flex;
+        margin-top: 13px;
+
+        p {
+            padding-left: 12px;
+            font-size: 14px;
+        }
+
+        .one_text {
+            font-size: 20px;
+        }
+    }
+}
+
+.re_giji_btn_flex {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.re_giji_btn {
+    /* margin: 18px auto 8px; */
+    width: 112px;
+    height: 40px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 13px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(211deg, #68C5F3 -22.18%, #53B9EB 46.51%, #030350 219.99%);
+    transition: transform .12s ease, filter .2s ease;
+}
+
+.re_giji_btn_1 {
+    position: absolute;
+    margin-left: 4px;
+    width: 20px;
+    height: 20px;
+    opacity: 0.3;
+    background-color: #FFF;
+    clip-path: polygon(2% 50%, 19% 98%, 41% 99%, 32% 51%, 40% 0%, 16% 0%, 9% 26%, 5% 38%, 6% 63%, 11% 76%, 15% 86%, 25% 100%, 40% 99%);
+}
+
+.re_giji_btn:active {
+    transform: scale(0.99);
+}
+
+.re_giji_btn:hover {
+    filter: brightness(1.03);
 }
 
 .news {
@@ -544,13 +627,23 @@ body {
 
     .news_box {
         width: 163px;
-        height: 163px;
+        line-height: 1.4;
+        /* height: 163px; */
         /* border: #999 3px solid; */
         box-shadow: 0 0 4px gray;
         background-color: #FFF;
         overflow: hidden;
         border-radius: 10px;
         position: relative;
+
+        .news_text {
+            padding: 5px;
+
+            h3 {
+                margin-top: 2px;
+                font-weight: 500;
+            }
+        }
     }
 }
 
@@ -654,4 +747,106 @@ main {
     color: #ffffffb3;
     font-weight: 200;
     font-size: .8em;
+}
+
+
+
+
+/* ===== 投票モーダル（追加） ===== */
+.voteModal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 2000;
+}
+
+.voteModal.is-open {
+    display: block;
+}
+
+.voteModal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .25);
+    backdrop-filter: blur(4px);
+}
+
+.voteModal__card {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(320px, 92vw);
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+}
+
+.voteModal__title {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.voteModal__text {
+    margin: 0 0 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, .65);
+    line-height: 1.6;
+}
+
+.voteModal__pick {
+    border: 2px solid #000;
+    background: #F3FAFF;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.voteModal__actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.voteModal__btn {
+    border-radius: 999px;
+    padding: 10px 12px;
+    border: 2px solid #000;
+    cursor: pointer;
+    background: #fff;
+}
+
+.voteModal__btn--primary {
+    background: #68C5F3;
+}
+
+.voteModal__btn--ghost {
+    background: #fff;
+}
+
+/* ===== トースト（追加） ===== */
+.voteToast {
+    position: fixed;
+    left: 50%;
+    bottom: 88px;
+    /* 下メニューに被らない */
+    transform: translateX(-50%) translateY(12px);
+    opacity: 0;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 999px;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 800;
+    z-index: 2100;
+    transition: opacity .2s ease, transform .2s ease;
+}
+
+.voteToast.is-show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }

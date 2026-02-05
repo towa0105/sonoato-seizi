@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/index.css">
     <script defer src="Js/index.Js"></script>
+    <script defer src="Js/vote.js"></script>
 </head>
 
 <body>
@@ -55,32 +56,36 @@
                 <article class="profile" aria-label="候補者カード">
 
                     <div class="profile_name">
-                        <h2><ruby>林<rt>はやし</rt>原<rt>ばら</rt>大<rt>だい</rt>喜<rt>き</rt></ruby></h2>
+                        <h2> <ruby>高橋<rp>(</rp>
+                                <rt>たかはし</rt>
+                                <rp>)</rp>さや
+                            </ruby>
+                        </h2>
                     </div>
                     <div class="profile__imgWrap">
-                        <img class="profile__img" src="images/AdobeStock_602821515.jpeg" alt="候補者の写真">
+                        <img class="profile__img" src="images/高橋.png" alt="候補者の写真">
                     </div>
 
                     <table class="profile__table" aria-label="候補者情報">
                         <tr>
                             <th>性別</th>
-                            <td>男性</td>
+                            <td>女性</td>
                         </tr>
                         <tr>
                             <th>年齢</th>
-                            <td>３５歳</td>
+                            <td>43歳</td>
                         </tr>
                         <tr>
                             <th>選挙区</th>
-                            <td>大阪８区（豊中市）</td>
+                            <td>〇〇８区（△△△市）</td>
                         </tr>
                         <tr>
                             <th>選挙</th>
-                            <td>第51回衆議院議員選挙</td>
+                            <td>第51回ーーーー選挙</td>
                         </tr>
                         <tr>
                             <th>党派</th>
-                            <td>未来自由党</td>
+                            <td>共学未来党</td>
                         </tr>
                     </table>
 
@@ -106,10 +111,15 @@
                 <article class="profile" aria-label="候補者カード">
 
                     <div class="profile_name">
-                        <h2><ruby>林<rt>はやし</rt>原<rt>ばら</rt>大<rt>だい</rt>喜<rt>き</rt></ruby></h2>
+                        <h2> <ruby>田辺　光一<rp>(</rp>
+                                <rt>たなべ　　　こういち</rt>
+                                <rp>)</rp>
+                            </ruby>
+                        </h2>
+
                     </div>
                     <div class="profile__imgWrap">
-                        <img class="profile__img" src="images/AdobeStock_1056620685.jpeg" alt="候補者の写真">
+                        <img class="profile__img" src="images/田辺.png" alt="候補者の写真">
                     </div>
 
                     <table class="profile__table" aria-label="候補者情報">
@@ -123,15 +133,15 @@
                         </tr>
                         <tr>
                             <th>選挙区</th>
-                            <td>大阪８区（豊中市）</td>
+                            <td>〇〇８区（△△△市）</td>
                         </tr>
                         <tr>
                             <th>選挙</th>
-                            <td>第51回衆議院議員選挙</td>
+                            <td>第51回ーーーー選挙</td>
                         </tr>
                         <tr>
                             <th>党派</th>
-                            <td>未来自由党</td>
+                            <td>くらし調和党</td>
                         </tr>
                     </table>
 
@@ -217,41 +227,73 @@
         <div class="person">
             <div class="candidate">
                 <div class="person_img">
-                    <img src="images/AdobeStock_602821515.jpeg" alt="">
+                    <img src="images/高橋.png" alt="">
                 </div>
                 <div class="person_text">
-                    <h2><ruby>渡<rt>わた</rt>辺<rt>なべ</rt>荘<rt>そう</rt>一<rt>いち</rt></ruby></h2>
-                    <div class="role">
-                        <p>生年月日　<span class="day">1990年 5月6日</span></p>
-                        <p>前職　会社員</p>
+                    <div class="person_name">
+                        <h2> <ruby>高橋<rp>(</rp>
+                                <rt>たかはし</rt>
+                                <rp>)</rp>さや
+                            </ruby>
+                        </h2>
+                        <a href="#">詳細を見る</a>
                     </div>
-                </div>
-            </div>
-            <div class="candidate">
-                <div class="person_img">
-                    <img src="images/AdobeStock_602821515.jpeg" alt="">
-                </div>
-                <div class="person_text">
-                    <h2><ruby>渡<rt>わた</rt>辺<rt>なべ</rt>荘<rt>そう</rt>一<rt>いち</rt></ruby></h2>
-                    <div class="role">
-                        <p>生年月日　1990年 5月6日</p>
-                        <p>前職　</p>
+                    <div class="birthday">
+                        <p>生年月日</p>
+                        <p>1990年5月6日</p>
                     </div>
-                </div>
-            </div>
-            <div class="candidate">
-                <div class="person_img">
-                    <img src="images/AdobeStock_602821515.jpeg" alt="">
-                </div>
-                <div class="person_text">
-                    <h2><ruby>林<rt>はやし</rt>原<rt>ばら</rt>大<rt>だい</rt>喜<rt>き</rt></ruby></h2>
                     <div class="role">
-                        <p>生年月日　<span class="day">1990年 5月6日</span></p>
-                        <p>前職　</p>
+                        <p>前職</p>
+                        <p>大学職員</p>
+                    </div>
+                    <div class="Oneword">
+                        <p>公約</p>
+                        <p class="one_text">児童福祉応援</p>
+                    </div>
+                    <div class="re_giji_btn_flex">
+                        <button class="re_giji_btn" type="button">
+                            <div class="re_giji_btn_1"></div>投票する
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="person">
+            <div class="candidate">
+                <div class="person_img">
+                    <img src="images/高橋.png" alt="">
+                </div>
+                <div class="person_text">
+                    <div class="person_name">
+                        <h2> <ruby>田辺　光一<rp>(</rp>
+                                <rt>　たなべ　　　こういち</rt>
+                                <rp>)</rp>
+                            </ruby>
+                        </h2>
+                        <a href="#">詳細を見る</a>
+                    </div>
+                    <div class="birthday">
+                        <p>生年月日</p>
+                        <p>1990年5月6日</p>
+                    </div>
+                    <div class="role">
+                        <p>前職</p>
+                        <p>地域活動団体</p>
+                    </div>
+                    <div class="Oneword">
+                        <p>公約</p>
+                        <p class="one_text">減税政策</p>
+                    </div>
+                    <div class="re_giji_btn_flex">
+                        <button class="re_giji_btn" type="button">
+                            <div class="re_giji_btn_1"></div>投票する
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="news">
             <h2>最近のニュースを見て<br>
                 政治を知ろう</h2>
@@ -297,7 +339,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </main>ß
     <footer class="footer-2">
         <a href="#">
             <!--お好きな画像を指定してください-->
@@ -342,7 +384,7 @@
         <p class="footer-2__copyright">@ 2023 CSS Stock All rights reserved.</p>
     </footer>
 
-
+    <a href="results.html">aaaaaa</a>
 </body>
 
 </html>
