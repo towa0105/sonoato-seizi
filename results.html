@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>投票結果</title>
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/results.css">
+    <script defer src="Js/results.js"></script>
+</head>
+
+<body>
+    <main class="r-wrap">
+        <header class="r-head">
+            <h1>投票結果</h1>
+            <a class="r-back" href="index.html">戻る</a>
+        </header>
+
+        <section class="r-card">
+            <h2>1回目（直感投票）</h2>
+            <p class="r-muted" id="sum1">総投票数：0</p>
+            <div id="list1" class="r-list"></div>
+        </section>
+
+        <section class="r-card">
+            <h2>2回目（比較後投票）</h2>
+            <p class="r-muted" id="sum2">総投票数：0</p>
+            <div id="list2" class="r-list"></div>
+        </section>
+
+        <section class="r-card">
+            <h2>操作</h2>
+            <button id="resetAll" class="r-danger">すべての投票データを初期化</button>
+            <p class="r-muted">※展示用（この端末のデータのみ）</p>
+        </section>
+    </main>
+</body>
+
+</html>

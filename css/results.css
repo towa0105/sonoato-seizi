@@ -1,0 +1,110 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #F3FAFF;
+    font-family: 'A P-OTF A1Gothic Std', 'Arial Narrow', Arial, sans-serif;
+    color: #000;
+}
+
+.r-wrap {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 18px 14px 40px;
+}
+
+.r-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.r-head h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.r-back {
+    border: 2px solid #000;
+    border-radius: 999px;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    font-size: 12px;
+}
+
+.r-card {
+    background: #fff;
+    border: 2px solid #00000020;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 0 8px #ccc;
+    margin-bottom: 12px;
+}
+
+.r-card h2 {
+    font-size: 16px;
+    margin: 0 0 6px;
+}
+
+.r-muted {
+    color: rgba(0, 0, 0, .65);
+    font-size: 12px;
+    margin: 0 0 10px;
+}
+
+.r-list {
+    display: grid;
+    gap: 10px;
+}
+
+.r-row {
+    display: grid;
+    gap: 6px;
+}
+
+.r-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.r-name {
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.r-meta {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .65);
+    white-space: nowrap;
+}
+
+.r-bar {
+    height: 10px;
+    border: 2px solid #00000020;
+    border-radius: 999px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.r-fill {
+    height: 100%;
+    width: 0%;
+    background: #68C5F3;
+    transition: width .25s ease;
+}
+
+.r-danger {
+    width: 100%;
+    border: 2px solid #000;
+    background: #FF6C6C;
+    color: #000;
+    font-weight: 900;
+    padding: 10px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+}
