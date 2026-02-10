@@ -5,7 +5,7 @@ html {
 body {
     background-color: #F3FAFF;
     font-family: 'A P-OTF A1Gothic Std', 'Arial Narrow', Arial, sans-serif;
-
+    font-weight: 500;
 }
 
 .main_vs {
@@ -28,7 +28,7 @@ body {
 
 
 /* 下のメニューバー・ホームボタン */
-/* 
+
 .footer-menu {
     position: fixed;
     bottom: 0;
@@ -48,7 +48,7 @@ body {
     >span {
         height: 37px;
     }
-} */
+}
 
 .question {
     display: block;
@@ -240,6 +240,7 @@ body {
     font-weight: 900;
     font-size: 16px;
     opacity: .9;
+    rotate: 180deg;
     transition: transform .22s ease;
 }
 
@@ -349,7 +350,7 @@ body {
 .profile__table th {
     width: 72px;
     color: #888;
-    font-weight: 900;
+    font-weight: 500;
 }
 
 .voteBtn {
@@ -431,6 +432,11 @@ body {
         gap: 25px;
         overflow-x: auto;
         overflow-y: hidden;
+
+        a {
+
+            text-decoration: none;
+        }
     }
 
     .article_hikaku {
@@ -464,9 +470,18 @@ body {
 
         h2 {
             margin-top: 22px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 500;
         }
     }
 }
+
+
 
 .re_giji {
     display: flex;
@@ -670,6 +685,9 @@ body {
     height: 163px;
     border: #000 3px solid;
     box-shadow: 0 0 4px gray;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
 
     h3 {
         font-size: 50px;
@@ -680,7 +698,7 @@ body {
 
     P {
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
         text-align: center;
         color: #ffffff;
 
@@ -695,7 +713,7 @@ body {
 }
 
 main {
-    margin-bottom: 213px;
+    margin-bottom: 180px;
 }
 
 /* footer {
@@ -849,4 +867,32 @@ main {
 .voteToast.is-show {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+
+
+
+.r-card {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.r-muted {
+    color: rgba(0, 0, 0, .65);
+    font-size: 12px;
+    margin: 0 0 10px;
+}
+
+.r-danger {
+    width: 340px;
+    border: 2px solid #000;
+    background: #FF6C6C;
+    color: #000;
+    font-weight: 900;
+    padding: 10px 12px;
+    border-radius: 999px;
+    cursor: pointer;
 }

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/index.css">
     <script defer src="Js/index.Js"></script>
     <script defer src="Js/vote.js"></script>
+    <script defer src="Js/results.js"></script>
+
 </head>
 
 <body>
@@ -18,7 +20,6 @@
             <img class="first_logo" src="images/ロゴ透過バージョン縮小.png" alt="">
             <h1>あなたの選択で、<span class="font_color">日本</span>が変わる</h1>
         </div>
-
         <div class="footer-menu">
             <a href="search.html" class="fas fa-home">
                 <span><img src="images/search_button.png" alt=""></span>
@@ -26,7 +27,7 @@
             <a href="#" class="fas fa-search">
                 <span><img src="images/home_button.png" alt=""></span>
             </a>
-            <a href="#" class="fas fa-user">
+            <a href="results.html" class="fas fa-user">
                 <span><img src="images/giji_button.png" alt=""></span>
             </a>
         </div>
@@ -56,11 +57,7 @@
                 <article class="profile" aria-label="候補者カード">
 
                     <div class="profile_name">
-                        <h2> <ruby>高橋<rp>(</rp>
-                                <rt>たかはし</rt>
-                                <rp>)</rp>さや
-                            </ruby>
-                        </h2>
+                        <h2> 高橋さや</h2>
                     </div>
                     <div class="profile__imgWrap">
                         <img class="profile__img" src="images/高橋.png" alt="候補者の写真">
@@ -111,11 +108,7 @@
                 <article class="profile" aria-label="候補者カード">
 
                     <div class="profile_name">
-                        <h2> <ruby>田辺　光一<rp>(</rp>
-                                <rt>たなべ　　　こういち</rt>
-                                <rp>)</rp>
-                            </ruby>
-                        </h2>
+                        <h2> 田辺光一</h2>
 
                     </div>
                     <div class="profile__imgWrap">
@@ -157,16 +150,54 @@
             <!-- 環境・地球 -->
             <article class="article_giji js-topic" data-topic="environment" aria-expanded="false">
                 <div class="giji_box">
-                    <h2>環境・地球</h2>
+                    <h2>福祉・保障</h2>
                     <p>地球にやさしく、<br>人にもやさしく</p>
                     <div class="giji_chev" aria-hidden="true">︿</div>
                 </div>
             </article>
-
             <div class="topic-detail" aria-hidden="true">
-                <div class="detailStub">
-                    <p>ここに「環境・地球」の候補者カードを入れられます。</p>
-                </div>
+                <article class="profile" aria-label="候補者カード">
+
+                    <div class="profile_name">
+                        <h2> <ruby>田辺　光一<rp>(</rp>
+                                <rt>たなべ　　　こういち</rt>
+                                <rp>)</rp>
+                            </ruby>
+                        </h2>
+
+                    </div>
+                    <div class="profile__imgWrap">
+                        <img class="profile__img" src="images/田辺.png" alt="候補者の写真">
+                    </div>
+
+                    <table class="profile__table" aria-label="候補者情報">
+                        <tr>
+                            <th>性別</th>
+                            <td>男性</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>３５歳</td>
+                        </tr>
+                        <tr>
+                            <th>選挙区</th>
+                            <td>〇〇８区（△△△市）</td>
+                        </tr>
+                        <tr>
+                            <th>選挙</th>
+                            <td>第51回ーーーー選挙</td>
+                        </tr>
+                        <tr>
+                            <th>党派</th>
+                            <td>生活安心党</td>
+                        </tr>
+                    </table>
+
+                    <button class="voteBtn" type="button">
+                        <div class="voteBtn_object"></div>投票する
+                    </button>
+                </article>
+
                 <button class="detailClose" type="button">閉じる</button>
             </div>
 
@@ -178,13 +209,52 @@
                     <div class="giji_chev" aria-hidden="true">︿</div>
                 </div>
             </article>
-
             <div class="topic-detail" aria-hidden="true">
-                <div class="detailStub">
-                    <p>ここに「自由・挑戦」の候補者カードを入れられます。</p>
-                </div>
+                <article class="profile" aria-label="候補者カード">
+
+                    <div class="profile_name">
+                        <h2> <ruby>田辺　光一<rp>(</rp>
+                                <rt>たなべ　　　こういち</rt>
+                                <rp>)</rp>
+                            </ruby>
+                        </h2>
+
+                    </div>
+                    <div class="profile__imgWrap">
+                        <img class="profile__img" src="images/田辺.png" alt="候補者の写真">
+                    </div>
+
+                    <table class="profile__table" aria-label="候補者情報">
+                        <tr>
+                            <th>性別</th>
+                            <td>男性</td>
+                        </tr>
+                        <tr>
+                            <th>年齢</th>
+                            <td>３５歳</td>
+                        </tr>
+                        <tr>
+                            <th>選挙区</th>
+                            <td>〇〇８区（△△△市）</td>
+                        </tr>
+                        <tr>
+                            <th>選挙</th>
+                            <td>第51回ーーーー選挙</td>
+                        </tr>
+                        <tr>
+                            <th>党派</th>
+                            <td>未来自由党</td>
+                        </tr>
+                    </table>
+
+                    <button class="voteBtn" type="button">
+                        <div class="voteBtn_object"></div>投票する
+                    </button>
+                </article>
+
                 <button class="detailClose" type="button">閉じる</button>
             </div>
+
         </div>
         s
         <div class="hikaku">
@@ -194,30 +264,36 @@
             </div>
 
             <div class="hikaku_flex">
-                <article class="article_hikaku">
-                    <div class="hikaku_box">
-                        <h2>政策を見る</h2>
-                        <p>候補者の目指す未来を、<br>
-                            テーマごとに整理しました。</p>
-                    </div>
-                    <img src="images/政党比較.png" alt="">
-                </article>
-                <article class="article_hikaku">
-                    <div class="hikaku_box">
-                        <h2>経歴を見る</h2>
-                        <p>これまで何をしてきたのか<br>
-                            ひと目でわかる経歴まとめ。</p>
-                    </div>
-                    <img src="images/政党比較.png" alt="">
-                </article>
-                <article class="article_hikaku">
-                    <div class="hikaku_box">
-                        <h2>党を見る</h2>
-                        <p>これまで何をしてきたのか<br>
-                            ひと目でわかる経歴まとめ。</p>
-                    </div>
-                    <img src="images/政党比較.png" alt="">
-                </article>
+                <a href="search.html">
+                    <article class="article_hikaku 1">
+                        <div class="hikaku_box">
+                            <h2>政策を見る</h2>
+                            <p>候補者の目指す未来を、<br>
+                                テーマごとに整理しました。</p>
+                        </div>
+                        <img src="images/政党比較.png" alt="">
+                    </article>
+                </a>
+                <a href="">
+                    <article class="article_hikaku">
+                        <div class="hikaku_box">
+                            <h2>経歴を見る</h2>
+                            <p>これまで何をしてきたのか<br>
+                                ひと目でわかる経歴まとめ。</p>
+                        </div>
+                        <img src="images/政党比較.png" alt="">
+                    </article>
+                </a>
+                <a href="#">
+                    <article class="article_hikaku 3">
+                        <div class="hikaku_box">
+                            <h2>党を見る</h2>
+                            <p>これまで何をしてきたのか<br>
+                                ひと目でわかる経歴まとめ。</p>
+                        </div>
+                        <img src="images/政党比較.png" alt="">
+                    </article>
+                </a>
             </div>
         </div>
         <div class="re_giji">
@@ -261,15 +337,11 @@
         <div class="person">
             <div class="candidate">
                 <div class="person_img">
-                    <img src="images/高橋.png" alt="">
+                    <img src="images/田辺.png" alt="">
                 </div>
                 <div class="person_text">
                     <div class="person_name">
-                        <h2> <ruby>田辺　光一<rp>(</rp>
-                                <rt>　たなべ　　　こういち</rt>
-                                <rp>)</rp>
-                            </ruby>
-                        </h2>
+                        <h2></h2>
                         <a href="#">詳細を見る</a>
                     </div>
                     <div class="birthday">
@@ -339,7 +411,11 @@
                 </div>
             </div>
         </div>
-    </main>ß
+    </main>
+    <section class="r-card">
+        <h2>展示会ー投票やり直しボタン</h2>
+        <button id="resetAll" class="r-danger">投票データを削除</button>
+    </section>
     <footer class="footer-2">
         <a href="#">
             <!--お好きな画像を指定してください-->
