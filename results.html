@@ -4,35 +4,70 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>投票結果</title>
+    <title>当選後レポート（展示用）</title>
     <link rel="stylesheet" href="css/ress.css">
     <link rel="stylesheet" href="css/results.css">
     <script defer src="Js/results.js"></script>
 </head>
 
 <body>
-    <main class="r-wrap">
-        <header class="r-head">
-            <h1>投票結果</h1>
-            <a class="r-back" href="index.html">戻る</a>
+    <main class="dash">
+        <header class="dashHead">
+            <div>
+                <h1>当選後レポート</h1>
+                <p class="dashSub">再投票（比較後投票）の結果をもとに、当選者の実績と公約進捗を表示します。</p>
+            </div>
+            <a class="dashBack" href="index.html">トップへ戻る</a>
         </header>
 
-        <section class="r-card">
-            <h2>1回目（直感投票）</h2>
-            <p class="r-muted" id="sum1">総投票数：0</p>
-            <div id="list1" class="r-list"></div>
+        <!-- 当選者 -->
+        <section class="card winner">
+            <div class="winnerTop">
+                <div>
+                    <p class="chip" id="winnerChip">当選者</p>
+                    <h2 class="winnerName" id="winnerName">—</h2>
+                    <p class="winnerMeta" id="winnerMeta">再投票で最多得票</p>
+                </div>
+                <div class="winnerImgWrap">
+                    <img id="winnerImg" class="winnerImg" src="" alt="">
+                </div>
+            </div>
+
+            <div class="kpiGrid" id="kpiGrid"></div>
+
+            <!-- <div class="winnerActions">
+                <button class="btn" id="showCountsBtn" type="button">票数（参考）を表示</button>
+                <button class="btn danger" id="resetAll" type="button">展示リセット</button>
+            </div> -->
+
+            <!-- 票数（参考） -->
+            <div class="countsWrap is-hidden" id="countsWrap" aria-hidden="true">
+                <h3>再投票 票数（参考）</h3>
+                <div id="countsList" class="countsList"></div>
+            </div>
         </section>
 
-        <section class="r-card">
-            <h2>2回目（比較後投票）</h2>
-            <p class="r-muted" id="sum2">総投票数：0</p>
-            <div id="list2" class="r-list"></div>
+        <!-- 当選後にやったこと -->
+        <section class="card">
+            <h3 class="secTitle">当選後に行ったこと（実績）</h3>
+            <ul class="list" id="achievements"></ul>
         </section>
 
-        <section class="r-card">
-            <h2>操作</h2>
-            <button id="resetAll" class="r-danger">すべての投票データを初期化</button>
-            <p class="r-muted">※展示用（この端末のデータのみ）</p>
+        <!-- 公約の進捗 -->
+        <section class="card">
+            <h3 class="secTitle">公約の進捗（実行率）</h3>
+            <div class="pledges" id="pledges"></div>
+            <!-- <p class="note">※このデータは展示用のサンプルです（実在の人物・団体とは関係ありません）。</p> -->
+        </section>
+
+        <!-- 次点（任意） -->
+        <section class="card sub" id="runnerUpCard">
+            <h3 class="secTitle">次点</h3>
+            <p class="muted" id="runnerUpText">—</p>
+        </section>
+        <section class="card">
+            <h3 class="secTitle">当選者の1日の流れ（施策の実行プロセス）</h3>
+            <div class="timeline" id="timeline"></div>
         </section>
     </main>
 </body>
