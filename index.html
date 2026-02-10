@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/index.css">
     <script defer src="Js/index.Js"></script>
     <script defer src="Js/vote.js"></script>
-    <script defer src="Js/results.js"></script>
 
 </head>
 
@@ -27,7 +26,7 @@
             <a href="#" class="fas fa-search">
                 <span><img src="images/home_button.png" alt=""></span>
             </a>
-            <a href="results.html" class="fas fa-user">
+            <a href="results.html" class="fas fa-user js-result-link">
                 <span><img src="images/giji_button.png" alt=""></span>
             </a>
         </div>
@@ -39,6 +38,28 @@
             <p class="question_text">このサイトはあなたの考える練習を応援します。</p>
             <div class="question_line"></div>
         </div>
+        <section class="area-select">
+            <h2>あなたが暮らしている地域を選んでください</h2>
+            <p>お住まい地域は後から変更できます</p>
+
+            <div class="area-buttons">
+                <button class="area-btn" data-area="osaka">北海道</button>
+                <button class="area-btn" data-area="Tohoku">東北</button>
+                <button class="area-btn" data-area=" Kanto">関東</button>
+                <button class="area-btn" data-area="Chubu">中部</button>
+                <button class="area-btn" data-area="Kinki">近畿</button>
+                <button class="area-btn" data-area="Chugoku">中国</button>
+                <button class="area-btn" data-area="Shikoku">四国</button>
+                <button class="area-btn" data-area="Kyushu">九州</button>
+
+
+            </div>
+
+            <button class="area-confirm" disabled>
+                この地域で考える
+            </button>
+        </section>
+
         <div class="giji">
             <h1>まずは直感で選んでみよう</h1>
 
@@ -159,15 +180,12 @@
                 <article class="profile" aria-label="候補者カード">
 
                     <div class="profile_name">
-                        <h2> <ruby>田辺　光一<rp>(</rp>
-                                <rt>たなべ　　　こういち</rt>
-                                <rp>)</rp>
-                            </ruby>
+                        <h2>松本昌伸
                         </h2>
 
                     </div>
                     <div class="profile__imgWrap">
-                        <img class="profile__img" src="images/田辺.png" alt="候補者の写真">
+                        <img class="profile__img" src="images/松本.png" alt="候補者の写真">
                     </div>
 
                     <table class="profile__table" aria-label="候補者情報">
@@ -177,7 +195,7 @@
                         </tr>
                         <tr>
                             <th>年齢</th>
-                            <td>３５歳</td>
+                            <td>62歳</td>
                         </tr>
                         <tr>
                             <th>選挙区</th>
@@ -213,15 +231,11 @@
                 <article class="profile" aria-label="候補者カード">
 
                     <div class="profile_name">
-                        <h2> <ruby>田辺　光一<rp>(</rp>
-                                <rt>たなべ　　　こういち</rt>
-                                <rp>)</rp>
-                            </ruby>
-                        </h2>
+                        <h2> 中村 直樹</h2>
 
                     </div>
                     <div class="profile__imgWrap">
-                        <img class="profile__img" src="images/田辺.png" alt="候補者の写真">
+                        <img class="profile__img" src="images/中村.png" alt="候補者の写真">
                     </div>
 
                     <table class="profile__table" aria-label="候補者情報">
@@ -231,7 +245,7 @@
                         </tr>
                         <tr>
                             <th>年齢</th>
-                            <td>３５歳</td>
+                            <td>41歳</td>
                         </tr>
                         <tr>
                             <th>選挙区</th>
@@ -312,7 +326,7 @@
                                 <rp>)</rp>さや
                             </ruby>
                         </h2>
-                        <a href="#">詳細を見る</a>
+                        <!-- <a href="#">詳細を見る</a> -->
                     </div>
                     <div class="birthday">
                         <p>生年月日</p>
@@ -324,7 +338,7 @@
                     </div>
                     <div class="Oneword">
                         <p>公約</p>
-                        <p class="one_text">児童福祉応援</p>
+                        <p class="one_text">教育費軽減</p>
                     </div>
                     <div class="re_giji_btn_flex">
                         <button class="re_giji_btn" type="button">
@@ -341,8 +355,8 @@
                 </div>
                 <div class="person_text">
                     <div class="person_name">
-                        <h2></h2>
-                        <a href="#">詳細を見る</a>
+                        <h2>田辺光一</h2>
+                        <!-- <a href="#">詳細を見る</a> -->
                     </div>
                     <div class="birthday">
                         <p>生年月日</p>
@@ -364,37 +378,107 @@
                 </div>
             </div>
         </div>
+        <div class="person">
+            <div class="candidate">
+                <div class="person_img">
+                    <img src="images/中村.png" alt="">
+                </div>
+                <div class="person_text">
+                    <div class="person_name">
+                        <h2> 中村 直樹
+                        </h2>
+                        <!-- <a href="#">詳細を見る</a> -->
+                    </div>
+                    <div class="birthday">
+                        <p>生年月日</p>
+                        <p>1985年6月27日</p>
+                    </div>
+                    <div class="role">
+                        <p>前職</p>
+                        <p>IT関連職
+                        </p>
+                    </div>
+                    <div class="Oneword">
+                        <p>公約</p>
+                        <p class="one_text">働き方改革実現</p>
+                    </div>
+                    <div class="re_giji_btn_flex">
+                        <button class="re_giji_btn" type="button">
+                            <div class="re_giji_btn_1"></div>投票する
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="person">
+            <div class="candidate">
+                <div class="person_img">
+                    <img src="images/松本.png" alt="">
+                </div>
+                <div class="person_text">
+                    <div class="person_name">
+                        <h2>
+                            松本 昌伸
+                        </h2>
+                        <!-- <a href="#">詳細を見る</a> -->
+                    </div>
+                    <div class="birthday">
+                        <p>生年月日</p>
+                        <p>1964年1月8日</p>
+                    </div>
+                    <div class="role">
+                        <p>前職</p>
+                        <p>福祉関係職</p>
+                    </div>
+                    <div class="Oneword">
+                        <p>公約</p>
+                        <p class="one_text">医療福祉・支援</p>
+                    </div>
+                    <div class="re_giji_btn_flex">
+                        <button class="re_giji_btn" type="button">
+                            <div class="re_giji_btn_1"></div>投票する
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <div class="news">
             <h2>最近のニュースを見て<br>
                 政治を知ろう</h2>
             <div class="news_flex">
-                <div class="news_box">
-                    <img src="images/news_img.png" alt="">
-                    <div class="news_text">
-                        <p><time datetime="2025-07-20">2024 7/20</time></p>
-                        <h3>教育費負担軽減をめぐり意見分かれる</h3>
+                <a href="#">
+                    <div class="news_box">
+                        <img src="images/news_img.png" alt="">
+                        <div class="news_text">
+                            <p><time datetime="2025-07-20">2024 7/20</time></p>
+                            <h3>教育費負担軽減をめぐり意見分かれる</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="news_box">
-                    <img src="images/new_tag.png" alt="" class="new_tag">
-                    <img src="images/news_img.png" alt="">
-                    <div class="news_text">
-                        <p><time datetime="2025-07-20">2024 7/20</time></p>
-                        <h3>若者向け家賃支援制度を試験導入へ</h3>
+                </a>
+                <a href="#">
+                    <div class="news_box">
+                        <img src="images/new_tag.png" alt="" class="new_tag">
+                        <img src="images/news_img.png" alt="">
+                        <div class="news_text">
+                            <p><time datetime="2025-07-20">2024 7/20</time></p>
+                            <h3>若者向け家賃支援制度を試験導入へ</h3>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div class="study">
             <h2>コラムを見て政治を知ろう</h2>
 
             <div class="study_flex">
-                <div class="study_contet">
-                    <h3>01</h3>
-                    <p>与党と野党って何？</p>
-                </div>
+                <a href="#">
+                    <div class="study_contet">
+                        <h3>01</h3>
+                        <p>与党と野党って何？</p>
+                    </div>
+                </a>
                 <div class="study_contet">
                     <h3>02</h3>
                     <p>衆議院と参議院<br>
@@ -459,8 +543,7 @@
         </nav>
         <p class="footer-2__copyright">@ 2023 CSS Stock All rights reserved.</p>
     </footer>
-
-    <a href="results.html">aaaaaa</a>
+    <script defer src="Js/results.js"></script>
 </body>
 
 </html>
